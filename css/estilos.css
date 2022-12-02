@@ -97,15 +97,15 @@ body {
     text-align: center;
 }
 
-.hero_title{
+.hero_title {
     font-size: 3.5rem;
 }
 
-.hero_paragraph{
+.hero_paragraph {
     margin-bottom: 25px;
 }
 
-.cta{
+.cta {
     display: inline-block;
     background-color: #1769b6;
     justify-self: center;
@@ -113,4 +113,69 @@ body {
     text-decoration: none;
     padding: 15px 30px;
     border-radius: 32px;
+}
+
+.about {
+    text-align: center;
+}
+
+.subtitle {
+    color: var(--color-title);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.about_paragraph {
+    line-height: 1.7;
+}
+
+.about_main {
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+}
+
+.about_icons {
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.about_icon {
+    width: 40px;
+}
+
+.knowledge {
+    background-color: #e5e5f7;
+    background-image: radial-gradient(#444cf7 0.75px, #e5e5f7 0.75px);
+    background-size: 15px 15px;
+    overflow: hidden;
+}
+
+.knowledge_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.knowledge_picture{
+    max-width: 500px;
+}
+
+.knowlegde_paragraph{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.knowledge_img{
+    width: 100%;
+    display: block;
 }
