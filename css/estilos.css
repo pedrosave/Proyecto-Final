@@ -41,6 +41,10 @@ body {
     z-index: -1;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .nav {
     --paddin-container: 0;
     height: 100%;
@@ -112,7 +116,7 @@ body {
     color: #fff;
     text-decoration: none;
     padding: 15px 30px;
-    border-radius: 32px;
+    border-radius: 6px;
 }
 
 .about {
@@ -208,44 +212,25 @@ body {
     --color-item: #696871;
 }
 
-.price_element--best {
-    width: 370px;
-    padding: 60px 40px;
-    background-color: #ff7143;
-    --color-plan: rgb(255 255 255 / 75%);
-    --color-prices: #fff;
-    --bg-cta: #9f3919;
-    --color--cta: #fff;
-    --color-item: #fff;
-}
-
 .price_name {
     color: var(--color-plan);
     margin-bottom: 15px;
+    font-size: 1.5rem;
     font-weight: 300;
 }
 
-.price_price {
-    font-size: 2.5rem;
-    color: var(--color-prices);
-}
-
-.price_items {
-    margin-top: 35px;
-    display: grid;
-    gap: 1em;
-    font-weight: 300;
-    font-size: 1.2rem;
-    margin-bottom: 50px;
-    color: #fff;
-    color: var(--color-item);
+.price_cards {
+    width: 100%;
+    margin: 10px;
+    padding: 0;
+    text-align: center;
 }
 
 .price_cta {
     background-color: var(--bg-cta);
     display: block;
-    padding: 20px 0;
-    border-radius: 10px;
+    padding: 15px 0;
+    border-radius: 6px;
     text-decoration: none;
     background-color: var(--bg-cta);
     font-weight: 600;
@@ -376,8 +361,8 @@ body {
 
 .preguntas_copy {
     width: 60%;
-    margin-bottom: 30px;
     margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 /* footer*/
@@ -448,6 +433,7 @@ body {
     font-size: 1rem;
     color: #ffff;
     border-radius: 6px;
+    cursor: pointer;
 }
 
 .footer_copy {
@@ -589,10 +575,6 @@ body {
     }
 
     .price_element {
-        width: 990%;
-    }
-
-    .price_element--best {
         width: 90%;
     }
 

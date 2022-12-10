@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda</title>
+    <title>Mass Gamer</title>
     <link rel="shortcut icon" href="./img/logo1.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilos.css">
@@ -14,7 +14,7 @@
 <body>
     <header class="hero">
 
-        <nav class="nav container">
+        <nav id="inicio-container" class="nav container">
 
             <div class="nav_logo">
                 <h2 class="nav_title">Tienda Gamer</h2>
@@ -23,16 +23,13 @@
             <ul class="nav_link nav_link--menu">
 
                 <li class="nav_items">
-                    <a href="#" class="nav_links">Inicio</a>
+                    <a href="#inicio-container" class="nav_links">Inicio</a>
                 </li>
                 <li class="nav_items">
-                    <a href="#" class="nav_links">Productos</a>
+                    <a href="#preguntas-container" class="nav_links">Preguntas Frecuentes</a>
                 </li>
                 <li class="nav_items">
-                    <a href="#" class="nav_links">Contacto</a>
-                </li>
-                <li class="nav_items">
-                    <a href="#" class="nav_links">Blog</a>
+                    <a href="#redes-container" class="nav_links">Redes</a>
                 </li>
 
                 <img src="./img/close.svg" alt="" class="nav_close">
@@ -50,7 +47,7 @@
             <p class="hero_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quos facilis ea!
                 Veritatis tempore eum amet assumenda nobis tempora, delectus quisquam aliquid itaque illo laudantium
                 enim, id minus natus illum.</p>
-            <a href="#" class="cta">Compra Ya!</a>
+            <a href="#price-container" class="cta">Compra Ya!</a>
         </section>
 
     </header>
@@ -95,52 +92,66 @@
             </div>
         </section>
 
-        <section class="price container">
+        <section id="price-container" class="price container">
             <h2 class="subtitle">Obten las ultimas consolas a un buen precio</h2>
 
             <div class="price_table">
 
                 <div class="price_element">
                     <p class="price_name">Play Station</p>
-                    <h3 class="price_price">Free</h3>
-
-
-                    <div class="price_items">
-                        <p class="price_features"></p>
-                        <p class="price_features"></p>
-                        <p class="price_features"></p>
-                    </div>
-
-                    <a href="#" class="price_cta">Compra Ya!</a>
-                </div>
-
-                <div class="price_element  price_element--best">
-                    <p class="price_name">XBox</p>
-                    <h3 class="price_price">Free</h3>
-
-
-                    <div class="price_items">
-                        <p class="price_features">Play Station</p>
-                        <p class="price_features">XBOX</p>
-                        <p class="price_features">Nintendo Swift</p>
-                    </div>
-
-                    <a href="#" class="price_cta">Compra Ya!</a>
+                    <img src="./img/ps5.png" alt="" class="price_cards">
+                    <a href="#" class="price_cta">S/ 3800.00</a>
                 </div>
 
                 <div class="price_element">
-                    <p class="price_name">Nintendo Swift</p>
-                    <h3 class="price_price">Free</h3>
-
-
-                    <div class="price_items">
-                        <p class="price_features">Play Station</p>
-                        <p class="price_features">XBOX</p>
-                        <p class="price_features">Nintendo Swift</p>
-                    </div>
-
-                    <a href="#" class="price_cta">Compra Ya!</a>
+                    <p class="price_name">Play Station VR</p>
+                    <img src="./img/psvr.png" alt="" class="price_cards">
+                    <a href="#" class="price_cta">S/ 1550.00</a>
                 </div>
+
+                <div class="price_element">
+                    <p class="price_name">XBOX Serie x</p>
+                    <img src="./img/xbox-serie-x-card.png" alt="" class="price_cards">
+                    <a href="#" class="price_cta">S/ 2850.00</a>
+                </div>
+
+                <div class="price_element">
+                    <p class="price_name">XBOX Serie S</p>
+                    <img src="./img/xbox-serie-s-card.png" alt="" class="price_cards">
+                    <a href="#" class="price_cta">S/ 2350.00</a>
+                </div>
+
+                <div class="price_element">
+                    <p class="price_name">Nintendo Switch Lite</p>
+                    <img src="./img/nintendo lite.png" alt="" class="price_cards">
+                    <a href="#" class="price_cta">S/ 1230.00</a>
+                </div>
+
+                <div class="price_element">
+                    <p class="price_name">Nintendo Switch</p>
+                    <img src="./img/switch.png" alt="" class="price_cards">
+                    <a href="#" class="price_cta">S/ 1850.00</a>
+                </div>
+
+                <div class="price_element">
+                    <p class="price_name">Switch Control</p>
+                    <img src="./img/controles.png" alt="" class="price_cards">
+                    <a href="#" class="price_cta">S/ 290.00</a>
+                </div>
+
+                <div class="price_element">
+                    <p class="price_name">Mando XBOX</p>
+                    <img src="./img/mando-xbox-card.png" alt="" class="price_cards">
+                    <a href="#" class="price_cta">S/ 340.00</a>
+                </div>
+
+                <div class="price_element">
+                    <p class="price_name">Mnado PS5</p>
+                    <img src="./img/mando ps55555555.png" alt="" class="price_cards">
+                    <a href="#" class="price_cta">S/ 450.00</a>
+                </div>
+
+
 
             </div>
         </section>
@@ -192,7 +203,7 @@
             </div>
         </section>
 
-        <section class="preguntas container">
+        <section id="preguntas-container" class="preguntas container">
             <h2 class="subtitle">Preguntas frecuentes</h2>
             <p class="preguntas_paragraph">Lorem, ipsum dolor
                 sit amet consectetur adipisicing elit. Labore repellendus aut et quaerat optio dicta rem culpa quisquam
@@ -279,25 +290,24 @@
 
     </main>
 
-    <footer class="footer">
+    <footer id="redes-container" class="footer">
         <section class="footer_container container">
 
             <nav class="nav nav--footer">
                 <h2 class="footer_title">Curso CSS</h2>
 
                 <ul class="nav_link nav_link--footer">
+
                     <li class="nav_items">
-                        <a href="#" class="nav_links">Inicio</a>
+                        <a href="#inicio-container" class="nav_links">Inicio</a>
                     </li>
                     <li class="nav_items">
-                        <a href="#" class="nav_links">Productos</a>
+                        <a href="#price-container" class="nav_links">Productos</a>
                     </li>
                     <li class="nav_items">
-                        <a href="#" class="nav_links">Contacto</a>
+                        <a href="#preguntas-container" class="nav_links">Preguntas Frecuentes</a>
                     </li>
-                    <li class="nav_items">
-                        <a href="#" class="nav_links">Blog</a>
-                    </li>
+
                 </ul>
             </nav>
 
@@ -318,7 +328,7 @@
                 <a href="#" class="footer_icons"><img src="./img/youtube.svg" class="footer_img"></a>
             </div>
 
-            <h3 class="footer_copyright">Todos los derechos reservados &copy; Pedro Salazar</h3>
+            <h4 class="footer_copyright">Todos los derechos reservados &copy; Pedro Salazar</h4>
 
         </section>
 
