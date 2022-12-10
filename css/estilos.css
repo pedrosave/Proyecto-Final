@@ -41,7 +41,7 @@ body {
     z-index: -1;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -214,6 +214,7 @@ html{
 
 .price_name {
     color: var(--color-plan);
+    filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
     margin-bottom: 15px;
     font-size: 1.5rem;
     font-weight: 300;
@@ -236,6 +237,12 @@ html{
     font-weight: 600;
     color: var(--color--cta);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+    transition: 0.5s linear;
+}
+
+.price_cta:hover {
+    filter: none;
 }
 
 /* testimonio */
