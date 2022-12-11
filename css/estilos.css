@@ -238,7 +238,7 @@ html {
     color: var(--color--cta);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
     filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
-    transition: 0.5s linear;
+    transition: 0.3s linear;
 }
 
 .price_cta:hover {
