@@ -217,7 +217,15 @@ html {
     filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
     margin-bottom: 15px;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 500;
+}
+
+.price_items {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 1.5em;
+    color: var(--color-item);
 }
 
 .price_cards {
@@ -242,6 +250,25 @@ html {
 }
 
 .price_cta:hover {
+    filter: none;
+}
+
+.price_finalizar {
+    background-color: #5454d4;
+    color: #fff;
+    padding: 15px 10px;
+    margin-top: 40px;
+    border-radius: 6px;
+    border: none;
+    text-decoration: none;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+    transition: 0.3s linear;
+}
+
+.price_finalizar:hover {
     filter: none;
 }
 
@@ -286,13 +313,6 @@ html {
 
 .testimonio_texts {
     max-width: 700px;
-}
-
-.testimonio_compra {
-    background-color: #4169e1;
-    color: #fff;
-    display: inline-block;
-    padding: 5px;
 }
 
 .testimonio_arrow {
