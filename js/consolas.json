@@ -4,62 +4,79 @@
         "price": 3800,
         "title": "Play Station 5",
         "category": "Play Station",
-        "image": "./img/ps5.png"
+        "image": "./img/ps5.png",
+        "cart":"./img/cart.svg"
     },
     {
         "id": 2,
         "price": 1550,
         "title": "Play Station VR",
         "category": "Play Station",
-        "image": "./img/psvr.png"
+        "image": "./img/psvr.png",
+        "cart":"./img/cart.svg"
+
     },
     {
         "id": 3,
         "price": 2850,
         "title": "XBOX Serie X",
         "category": "XBOX",
-        "image": "./img/xbox-serie-x-card.png"
+        "image": "./img/xbox-serie-x-card.png",
+        "cart":"./img/cart.svg"
+
     },
     {
         "id": 4,
         "price": 2350,
         "title": "XBOX Serie S",
         "category": "XBOX",
-        "image": "./img/xbox-serie-s-card.png"
+        "image": "./img/xbox-serie-s-card.png",
+        "cart":"./img/cart.svg"
+
     },
     {
         "id": 5,
         "price": 1230,
         "title": "Nintendo Switch Lite",
         "category": "Nintendo",
-        "image": "./img/nintendo lite.png"
+        "image": "./img/nintendo lite.png",
+        "cart":"./img/cart.svg"
+
     },
     {
         "id": 6,
         "price": 1850,
         "title": "Nintendo Switch",
         "category": "Nintendo",
-        "image": "./img/switch.png"
+        "image": "./img/switch.png",
+        "cart":"./img/cart.svg"
+
     },
     {
         "id": 7,
         "price": 290,
         "title": "Switch Control",
         "category": "Nintendo",
-        "image": "./img/controles.png"
+        "image": "./img/controles.png",
+        "cart":"./img/cart.svg"
+
     },
     {
         "id": 8,
         "price": 340,
         "title": "Mando XBOX",
         "category": "XBOX",
-        "image": "./img/mando-xbox-card.png"
+        "image": "./img/mando-xbox-card.png",
+        "cart":"./img/cart.svg"
+
     },
     {
         "id": 9,
         "price": 450,
         "title": "Mando PS5",
         "category": "Play Station",
-        "image": "./img/mando ps55555555.png"
+        "image": "./img/mando ps55555555.png",
+        "cart":"./img/cart.svg"
+
     }
 ]

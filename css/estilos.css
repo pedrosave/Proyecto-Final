@@ -220,12 +220,16 @@ html {
     font-weight: 500;
 }
 
-.price_items {
+.price_price {
     margin-top: 20px;
     margin-bottom: 20px;
     font-weight: 500;
     font-size: 1.5em;
     color: var(--color-item);
+}
+
+.price_cart {
+    cursor: pointer;
 }
 
 .price_cards {
@@ -270,6 +274,30 @@ html {
 
 .price_finalizar:hover {
     filter: none;
+}
+
+/* modal*/
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+}
+
+.modal_container{
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 1em;
 }
 
 /* testimonio */
