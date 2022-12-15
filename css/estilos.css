@@ -356,8 +356,11 @@ html {
     max-width: 250px;
 }
 
+
 .modal_cerrar {
+    text-align: center;
     display: flex;
+    align-items: center;
     gap: 30px;
 }
 
@@ -376,7 +379,7 @@ html {
     transition: 0.3s linear;
 }
 
-.modal_precio{
+.modal_precio {
     margin-top: 20px;
     padding: .8em .5em;
     display: inline-block;
@@ -389,6 +392,17 @@ html {
 .parrafo {
     font-weight: 900;
 }
+
+#precio_total {
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.info_carrito {
+    display: flex;
+}
+
 
 /* testimonio */
 

@@ -100,63 +100,8 @@
         <section id="price-container" class="price container">
             <h2 class="subtitle">Obten las ultimas consolas a un buen precio</h2>
 
-            <div class="price_table">
+            <div class="price_table"></div>
 
-                <!-- <div class="price_element">
-                    <p class="price_name">Play Station</p>
-                    <img src="./img/ps5.png" alt="" class="price_cards">
-                    <a href="#" class="price_cta">S/ 3800.00</a>
-                </div>
-
-                <div class="price_element">
-                    <p class="price_name">Play Station VR</p>
-                    <img src="./img/psvr.png" alt="" class="price_cards">
-                    <a href="#" class="price_cta">S/ 1550.00</a>
-                </div>
-
-                <div class="price_element">
-                    <p class="price_name">XBOX Serie X</p>
-                    <img src="./img/xbox-serie-x-card.png" alt="" class="price_cards">
-                    <a href="#" class="price_cta">S/ 2850.00</a>
-                </div>
-
-                <div class="price_element">
-                    <p class="price_name">XBOX Serie S</p>
-                    <img src="./img/xbox-serie-s-card.png" alt="" class="price_cards">
-                    <a href="#" class="price_cta">S/ 2350.00</a>
-                </div>
-
-                <div class="price_element">
-                    <p class="price_name">Nintendo Switch Lite</p>
-                    <img src="./img/nintendo lite.png" alt="" class="price_cards">
-                    <a href="#" class="price_cta">S/ 1230.00</a>
-                </div>
-
-                <div class="price_element">
-                    <p class="price_name">Nintendo Switch</p>
-                    <img src="./img/switch.png" alt="" class="price_cards">
-                    <a href="#" class="price_cta">S/ 1850.00</a>
-                </div>
-
-                <div class="price_element">
-                    <p class="price_name">Switch Control</p>
-                    <img src="./img/controles.png" alt="" class="price_cards">
-                    <a href="#" class="price_cta">S/ 290.00</a>
-                </div>
-
-                <div class="price_element">
-                    <p class="price_name">Mando XBOX</p>
-                    <img src="./img/mando-xbox-card.png" alt="" class="price_cards">
-                    <a href="#" class="price_cta">S/ 340.00</a>
-                </div>
-
-                <div class="price_element">
-                    <p class="price_name">Mando PS5</p>
-                    <img src="./img/mando ps55555555.png" alt="" class="price_cards">
-                    <a href="#" class="price_cta">S/ 450.00</a>
-                </div> -->
-
-            </div>
             <button class="price_finalizar"> Ir al Carrito</button>
         </section>
 
@@ -167,10 +112,13 @@
                 <h2 class="modal_title">Bienvenido a tu Compra</h2>
                 <img src="./img/modal.svg" class="modal_img">
 
-                <div class="modal_body"></div>
+                <div class="modal_body">
+                    <p class="parrafo">Aun no Agregaste nada!</p>
+                </div>
                 <div class="modal_cerrar">
-                    <a class="modal_close">Cerrar Carrito</a>
-                    <a class="modal_close modal_vaciar">VaciarCarrito</a>
+                    <a class="modal_close">Cerrar</a>
+                    <a class="modal_close modal_vaciar">Vaciar</a>
+                    <a id="modal_finalizar" class="modal_close">Finalizar</a>
                     <div class="precioTotal">
                         <span class="modal_precio">Precio Total:</span>
                         <p id="precio_total"></p>
@@ -338,12 +286,12 @@
 
     </footer>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/preguntas.js"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/card.js"></script>
     <script src="./js/modal.js"></script>
-
 
 </body>
 

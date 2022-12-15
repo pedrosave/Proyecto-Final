@@ -1,6 +1,7 @@
 const divCards = document.querySelector('.price_table')
 const vaciarCarrito = document.querySelector('.modal_vaciar')
 const precioTotal = document.querySelector('#precio_total')
+const procesarCompra = document.querySelector('#modal_finalizar')
 
 let carrito = []
 let productosJson = []
@@ -40,8 +41,20 @@ buscarProductos()
 async function agregarProductos(id) {
     await obtenerProductos()
 
-    const items = productosJson.find((prod) => prod.id === id)
-    carrito.push(items)
+    const existe = carrito.some(prod => prod.id === id)
+
+    if (existe) {
+        const prod = carrito.map(prod => {
+            if (prod.id === id) {
+                prod.cantidad++
+            }
+        })
+    } else {
+        const items = productosJson.find((prod) => prod.id === id)
+        carrito.push(items)
+    }
+
+
     mostrarCarrito()
 }
 
@@ -58,12 +71,13 @@ const mostrarCarrito = () => {
                 <img class="carrito_img" src="${image}"/>
             </div>
 
-            <div>
-                <p class="modal_paragraph">Producto: ${title}</p>
-                <p class="modal_paragraph">Precio: ${price}</p>
-                <p class="modal_paragraph">Cantidad: ${cantidad}</p>
-                <button onclick="eliminarProducto(${id})" class="eliminar_producto">Eliminar Producto</button>
-            </div>
+                <div>
+                    <p class="modal_paragraph">Producto: ${title}</p>
+                    <p class="modal_paragraph">Precio: ${price}</p>
+                    <p class="modal_paragraph">Cantidad: ${cantidad}</p>
+                    <button onclick="eliminarProducto(${id})" class="eliminar_producto">Eliminar Producto</button>
+                </div>
+
         </div>
         `
     })
@@ -72,9 +86,31 @@ const mostrarCarrito = () => {
         modalBody.innerHTML = `
         <p class="parrafo">Aun no Agregaste nada!</p>
         `
-    } 
+    }
 
-    precioTotal
+    precioTotal.textContent = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.price, 0)
+    const precioFinal = precioTotal.innerHTML
+    procesarCompra.addEventListener('click', () => {
+        if (carrito.length === 0) {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: `Tu carrito esta vacio`,
+                showConfirmButton: false,
+                timer: 5000
+            })
+        } else {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: `El Total de tu Compra es S/ ${precioFinal}`,
+                showConfirmButton: false,
+                timer: 5000
+            })
+            modalBody.innerHTML = 'GRACIAS POR TU COMPRA!'
+            precioTotal.innerHTML = 0
+        }
+    })
 
     guardarStorage()
 }
