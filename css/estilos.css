@@ -317,6 +317,32 @@ html {
     transition: var(--transition);
 }
 
+.modal_contenedor {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.carrito_img {
+    width: 150px;
+    padding: 20px;
+}
+
+.eliminar_producto {
+    background-color: #5454d4;
+    color: #fff;
+    padding: .5em .9em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
+    transition: 0.3s linear;
+}
+
+.eliminar_producto:hover {
+    filter: none;
+}
+
 .modal_title {
     font-size: 2rem;
 }
@@ -327,24 +353,41 @@ html {
 
 .modal_img {
     width: 90%;
-    max-width: 300px;
+    max-width: 250px;
+}
+
+.modal_cerrar {
+    display: flex;
+    gap: 30px;
 }
 
 .modal_close {
     text-decoration: none;
     color: #fff;
     background-color: #5454d4;
+    margin-top: 20px;
     padding: .8em 1.5em;
     border: none;
     border-radius: 6px;
+    cursor: pointer;
     display: inline-block;
     font-weight: 300;
     filter: drop-shadow(7px 7px 5px rgba(0, 0, 0, 0.5));
     transition: 0.3s linear;
 }
 
+.modal_precio{
+    margin-top: 20px;
+    padding: .8em .5em;
+    display: inline-block;
+}
+
 .modal_close:hover {
     filter: none;
+}
+
+.parrafo {
+    font-weight: 900;
 }
 
 /* testimonio */

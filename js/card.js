@@ -1,7 +1,19 @@
 const divCards = document.querySelector('.price_table')
+const vaciarCarrito = document.querySelector('.modal_vaciar')
+const precioTotal = document.querySelector('#precio_total')
 
-const carrito = []
+let carrito = []
 let productosJson = []
+
+document.querySelector('DOMContentLoaded', () => {
+    JSON.parse(localStorage.getItem('carrito')) || []
+    mostrarCarrito()
+})
+
+vaciarCarrito.addEventListener('click', () => {
+    carrito.length = []
+    mostrarCarrito()
+})
 
 async function obtenerProductos() {
     const productosFetch = await fetch('./js/consolas.json')
@@ -11,7 +23,7 @@ async function obtenerProductos() {
 const buscarProductos = async () => {
     await obtenerProductos()
     productosJson.forEach(prod => {
-        const { id, price, title, image, cart } = prod
+        const { id, price, title, image } = prod
         divCards.innerHTML += `
         <div class="price_element">
             <p class="price_name">${title}</p>
@@ -30,29 +42,54 @@ async function agregarProductos(id) {
 
     const items = productosJson.find((prod) => prod.id === id)
     carrito.push(items)
-
-    console.log(carrito)
+    mostrarCarrito()
 }
 
-// const mostrarCarrito = () => {
-//     const modalCarrito = document.querySelector('.modal')
+const mostrarCarrito = () => {
+    const modalBody = document.querySelector('.modal .modal_body')
 
-//     modalCarrito.innerHTML = ''
-//     carrito.forEach((prod) => {
-//         const { id, price, title, cantidad } = prod
-//         modalCarrito.innerHTML += `
-//         <div class="modalContenedor">
-//             <div>
-//                 <p>Producto: ${title}</p>
-//                 <p>Precio: ${price}</p>
-//                 <p>Cantidad: ${cantidad}</p>
+    modalBody.innerHTML = ''
+    carrito.forEach((prod) => {
+        const { id, image, price, title, cantidad } = prod
+        modalBody.innerHTML += `
+        <div class="modal_contenedor">
 
-//                 <button class="price_finalizar price_eliminar" ></button>
-//             </div>
-//         </div>
-//         `
-//     })
-// }
+            <div>
+                <img class="carrito_img" src="${image}"/>
+            </div>
+
+            <div>
+                <p class="modal_paragraph">Producto: ${title}</p>
+                <p class="modal_paragraph">Precio: ${price}</p>
+                <p class="modal_paragraph">Cantidad: ${cantidad}</p>
+                <button onclick="eliminarProducto(${id})" class="eliminar_producto">Eliminar Producto</button>
+            </div>
+        </div>
+        `
+    })
+
+    if (carrito.length === 0) {
+        modalBody.innerHTML = `
+        <p class="parrafo">Aun no Agregaste nada!</p>
+        `
+    } 
+
+    precioTotal
+
+    guardarStorage()
+}
+
+function eliminarProducto(id) {
+    const juegoId = id
+    carrito = carrito.filter((juego) => juego.id !== juegoId)
+    mostrarCarrito()
+}
+
+function guardarStorage() {
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+}
+
+
 
 
 

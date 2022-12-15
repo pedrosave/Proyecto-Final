@@ -157,18 +157,27 @@
                 </div> -->
 
             </div>
-            <button class="price_finalizar"> Finalizar Compra</button>
+            <button class="price_finalizar"> Ir al Carrito</button>
         </section>
 
         <section class="modal">
-            <div class="modal_container">
-                <img src="./img/modal.svg" class="modal_img">
-                <h2 class="modal_title">Bienvenido a tu Compra</h2>
-                <p class="modal_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <!-- <button class="modal_finalizar">Finalizar Compra</button> -->
-                <button class="modal_close">Cerrar Modal</button>
 
+            <div class="modal_container">
+
+                <h2 class="modal_title">Bienvenido a tu Compra</h2>
+                <img src="./img/modal.svg" class="modal_img">
+
+                <div class="modal_body"></div>
+                <div class="modal_cerrar">
+                    <a class="modal_close">Cerrar Carrito</a>
+                    <a class="modal_close modal_vaciar">VaciarCarrito</a>
+                    <div class="precioTotal">
+                        <span class="modal_precio">Precio Total:</span>
+                        <p id="precio_total"></p>
+                    </div>
+                </div>
             </div>
+
         </section>
 
         <section class="testimonio">
